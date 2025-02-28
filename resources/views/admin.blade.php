@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title> - DERIV HUB</title>
+    <title> - DERIVHUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,19 +43,19 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        {{-- <div id="spinner"
+        <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> --}}
+        </div>
         <!-- Spinner End -->
-
 
 
         <!-- Sidebar Start -->
         @include('sidebar')
         <!-- Sidebar End -->
+
 
         <!-- Content Start -->
         <div class="content">
@@ -102,55 +103,172 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
-
             <!DOCTYPE html>
             <html lang="en">
 
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Embedded Site</title>
+                <title>Admin Dashboard</title>
                 <style>
-                    /* Make sure the body takes the full height and has no margin */
-                    body,
-                    html {
+                    * {
                         margin: 0;
                         padding: 0;
-                        height: 100%;
+                        box-sizing: border-box;
+                        font-family: Arial, sans-serif;
                     }
 
-                    /* Container for the iframe to control the layout */
-                    .iframe-container {
-                        position: relative;
-                        width: 100%;
-                        height: 90vh;
-                        /* Full viewport height */
-                        overflow: hidden;
+                    body {
+                        background: #0a0a0a;
+                        color: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 100vh;
+                        flex-direction: column;
+                        padding-top: 20px;
                     }
 
-                    /* The iframe itself, making it responsive */
-                    .responsive-iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 90%;
+                    .login-container {
+                        background: #222;
+                        padding: 20px;
+                        border-radius: 8px;
+                        text-align: center;
+                        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+                    }
+
+                    .login-container input {
+                        padding: 10px;
+                        margin: 10px 0;
                         border: none;
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+
+                    .login-container button {
+                        padding: 10px;
+                        background: red;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        width: 100%;
+                    }
+
+                    .error {
+                        color: red;
+                        margin-top: 10px;
+                    }
+
+                    .admin-container {
+                        display: none;
+                        width: 95%;
+                        max-width: 1200px;
+                        padding: 20px;
+                        background: rgba(20, 20, 20, 0.9);
+                        border-radius: 10px;
+                        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+                    }
+
+                    .stats,
+                    .traders {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                        gap: 15px;
+                        margin-top: 20px;
+                    }
+
+                    .stat-box,
+                    .trader-box {
+                        padding: 20px;
+                        background: #111;
+                        border-radius: 8px;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        color: lightblue;
+                        transition: transform 0.3s, box-shadow 0.3s;
+                    }
+
+                    .stat-box:hover,
+                    .trader-box:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+                    }
+
+                    .no-traders {
+                        padding: 20px;
+                        background: #222;
+                        border-radius: 8px;
+                        text-align: center;
+                        font-size: 1.5rem;
+                        color: red;
+                        margin-top: 20px;
+                    }
+
+                    @media (max-width: 600px) {
+
+                        .stats,
+                        .traders {
+                            grid-template-columns: 1fr;
+                        }
                     }
                 </style>
+                <script>
+                    function validateForm() {
+                        const input = document.getElementById('accessCode').value;
+                        const errorMsg = document.getElementById('error-message');
+                        if (input === "CHOOSEN1231") {
+                            document.querySelector('.login-container').style.display = 'none';
+                            document.querySelector('.admin-container').style.display = 'block';
+                        } else {
+                            errorMsg.textContent = "Incorrect code!";
+                        }
+                    }
+                </script>
             </head>
 
             <body>
-
-                <div class="iframe-container">
-                    <iframe src="https://www.dollarprinterfx.com/" frameborder="0" class="responsive-iframe"></iframe>
+                <div class="login-container">
+                    <h2>Enter Access Code</h2>
+                    <input type="text" id="accessCode" placeholder="Enter code">
+                    <button onclick="validateForm()">Submit</button>
+                    <p class="error" id="error-message"></p>
                 </div>
-
+                <div class="admin-container">
+                    <h1>Admin Dashboard</h1>
+                    <div class="stats">
+                        <div class="stat-box">
+                            <h2>0</h2>
+                            <p>Registered Traders</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>0</h2>
+                            <p>Currently Trading</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>0</h2>
+                            <p>Active Traders</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>0</h2>
+                            <p>Total Trades</p>
+                        </div>
+                        <div class="stat-box">
+                            <h2>$0</h2>
+                            <p>Total Income</p>
+                        </div>
+                    </div>
+                    <h2 style="margin-top: 30px; color: yellow;">Traders List</h2>
+                    <div class="traders">
+                        <div class="no-traders">No active registered traders</div>
+                    </div>
+                </div>
             </body>
 
-
             </html>
+
+
+
 
 
             <!-- Footer Start -->

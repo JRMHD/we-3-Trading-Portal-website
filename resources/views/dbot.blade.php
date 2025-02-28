@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
     <title> - DERIV HUB</title>
@@ -42,12 +43,12 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        {{-- <div id="spinner"
+        <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> --}}
+        </div>
         <!-- Spinner End -->
 
 
@@ -71,34 +72,18 @@
                 <div class="navbar-nav align-items-center ms-auto">
 
 
-                    <!-- Telegram Icon -->
-                    <a href="https://t.me/derivhub25years" target="_blank">
-                        <i class="fab fa-telegram"></i><br>
-
-                        <!-- YouTube Icon -->
-                        <a href="https://youtube.com/@derivhubfreebots?si=UxddE2bftWKsBHZr" target="_blank">
-                            <i class="fab fa-youtube social-icons"></i>
-                        </a><br>
-
-                        <!-- Telegram Icon -->
-                        <a href="http://wa.me/254741922367" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-
-
-
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                    <img class="rounded-circle me-lg-2" src="img/user.jpg" alt=""
-                                        style="width: 40px; height: 40px;">
-                                    <span class="d-none d-lg-inline-flex">DERIV HUB</span>
-                                </a>
-                                <div
-                                    class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
-                                    <a href="#" class="dropdown-item">My Profile</a>
-                                    <a href="#" class="dropdown-item">Settings</a>
-                                    <a href="#" class="dropdown-item">Log Out</a>
-                                </div>
-                            </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt=""
+                                style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">DERIV HUB</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-secondary border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="#" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
                 </div>
             </nav>
             <!-- Navbar End -->
@@ -124,7 +109,7 @@
                     .iframe-container {
                         position: relative;
                         width: 100%;
-                        height: 90vh;
+                        height: 900vh;
                         /* Full viewport height */
                         overflow: hidden;
                     }
@@ -135,7 +120,16 @@
                         top: 0;
                         left: 0;
                         width: 100%;
-                        height: 90%;
+                        height: 100%;
+                        border: none;
+                    }
+
+                    .iframe-content {
+                        position: absolute;
+                        top: -90px;
+                        left: 0;
+                        width: 100%;
+                        height: 135%;
                         border: none;
                     }
                 </style>
@@ -144,11 +138,10 @@
             <body>
 
                 <div class="iframe-container">
-                    <iframe src="https://www.dollarprinterfx.com/" frameborder="0" class="responsive-iframe"></iframe>
+                    <iframe src="https://dbot.deriv.com/#chart" class="iframe-content" scrolling="no"></iframe>
                 </div>
 
             </body>
-
 
             </html>
 

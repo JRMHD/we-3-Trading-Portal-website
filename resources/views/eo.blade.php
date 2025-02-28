@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title> - DERIV HUB</title>
+    <title> - DERIVHUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,12 +43,12 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        {{-- <div id="spinner"
+        <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> --}}
+        </div>
         <!-- Spinner End -->
 
 
@@ -55,6 +56,7 @@
         <!-- Sidebar Start -->
         @include('sidebar')
         <!-- Sidebar End -->
+
 
         <!-- Content Start -->
         <div class="content">
@@ -102,53 +104,117 @@
                 </div>
             </nav>
             <!-- Navbar End -->
-
-
             <!DOCTYPE html>
             <html lang="en">
 
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Embedded Site</title>
+                <title>Even/Odd Strategies</title>
                 <style>
-                    /* Make sure the body takes the full height and has no margin */
-                    body,
-                    html {
+                    * {
                         margin: 0;
                         padding: 0;
-                        height: 100%;
+                        box-sizing: border-box;
+                        font-family: 'Arial', sans-serif;
                     }
 
-                    /* Container for the iframe to control the layout */
-                    .iframe-container {
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        background-color: #101128;
+                        color: #0af822;
+                    }
+
+                    .container {
+                        max-width: 800px;
+                        margin: auto;
+                        background-color: #252d40;
+                        padding: 20px;
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                         position: relative;
-                        width: 100%;
-                        height: 90vh;
-                        /* Full viewport height */
-                        overflow: hidden;
+                        border: 4px solid transparent;
+                        animation: glowing-border 3s linear infinite, border-move 5s linear infinite;
                     }
 
-                    /* The iframe itself, making it responsive */
-                    .responsive-iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 90%;
-                        border: none;
+                    @keyframes glowing-border {
+                        0% {
+                            box-shadow: 0 0 15px #0000ff, 0 0 25px #0000ff, 0 0 35px #0000ff;
+                        }
+
+                        100% {
+                            box-shadow: 0 0 25px #0000ff, 0 0 35px #0000ff, 0 0 45px #0000ff;
+                        }
+                    }
+
+                    @keyframes border-move {
+                        0% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+
+                        25% {
+                            border-image-source: linear-gradient(to bottom, #0000ff, transparent);
+                        }
+
+                        50% {
+                            border-image-source: linear-gradient(to left, #0000ff, transparent);
+                        }
+
+                        75% {
+                            border-image-source: linear-gradient(to top, #0000ff, transparent);
+                        }
+
+                        100% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+                    }
+
+                    h2 {
+                        color: #0000ff;
+                    }
+
+                    p {
+                        line-height: 1.6;
+                    }
+
+                    @media (max-width: 768px) {
+                        .container {
+                            padding: 15px;
+                        }
+
+                        body {
+                            padding: 10px;
+                        }
                     }
                 </style>
             </head>
 
             <body>
+                <div class="container">
+                    <h2>Even Strategy & Entry</h2>
+                    <p><strong>1:</strong> When numbers (2, 4, 6, 8) indicate 11.5% and above, place an Even contract
+                        type in all volatilities from Volatility 10 index to Volatility 100 index.</p>
+                    <p><strong>Main Volatility:</strong> Volatility 100 index.</p>
+                    <h3>Entry Point</h3>
+                    <p>Make sure the cursor hits 4 or 5 times on odd numbers, then run your bot if it hits any Even
+                        number.</p>
+                    <p><strong>Note:</strong> Don't rush! Wait for confirmation of an Even number before running your
+                        bot.</p>
 
-                <div class="iframe-container">
-                    <iframe src="https://www.dollarprinterfx.com/" frameborder="0" class="responsive-iframe"></iframe>
+                    <h2>Odd Strategy & Entry</h2>
+                    <p><strong>3:</strong> When numbers (1, 3, 5, 7, 9) indicate 11% and above in all volatilities from
+                        Volatility 10 index to Volatility 100 index, place an Odd contract type.</p>
+                    <p><strong>Main Volatility:</strong> Volatility 75 index.</p>
+                    <h3>Entry Point</h3>
+                    <p>Make sure the cursor hits 3 or 4 times on even numbers, then run your bot if it hits any Odd
+                        number.</p>
+                    <p><strong>Note:</strong> Don't rush! Wait for confirmation of an Odd number before running your
+                        bot.</p>
                 </div>
-
             </body>
-
 
             </html>
 

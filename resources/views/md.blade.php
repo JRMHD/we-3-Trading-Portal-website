@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title> - DERIV HUB</title>
+    <title> - DERIVHUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,12 +43,12 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        {{-- <div id="spinner"
+        <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> --}}
+        </div>
         <!-- Spinner End -->
 
 
@@ -103,52 +104,149 @@
             </nav>
             <!-- Navbar End -->
 
-
             <!DOCTYPE html>
             <html lang="en">
 
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Embedded Site</title>
+                <title>Matches & Differs Strategies</title>
                 <style>
-                    /* Make sure the body takes the full height and has no margin */
-                    body,
-                    html {
+                    * {
                         margin: 0;
                         padding: 0;
-                        height: 100%;
+                        box-sizing: border-box;
+                        font-family: 'Arial', sans-serif;
                     }
 
-                    /* Container for the iframe to control the layout */
-                    .iframe-container {
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        background-color: #101128;
+                        color: #0af822;
+                    }
+
+                    .container {
+                        max-width: 800px;
+                        margin: auto;
+                        background-color: #252d40;
+                        padding: 20px;
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                         position: relative;
-                        width: 100%;
-                        height: 90vh;
-                        /* Full viewport height */
-                        overflow: hidden;
+                        border: 4px solid transparent;
+                        animation: glowing-border 3s linear infinite, border-move 5s linear infinite;
                     }
 
-                    /* The iframe itself, making it responsive */
-                    .responsive-iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 90%;
-                        border: none;
+                    @keyframes glowing-border {
+                        0% {
+                            box-shadow: 0 0 15px #0000ff, 0 0 25px #0000ff, 0 0 35px #0000ff;
+                        }
+
+                        100% {
+                            box-shadow: 0 0 25px #0000ff, 0 0 35px #0000ff, 0 0 45px #0000ff;
+                        }
+                    }
+
+                    @keyframes border-move {
+                        0% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+
+                        25% {
+                            border-image-source: linear-gradient(to bottom, #0000ff, transparent);
+                        }
+
+                        50% {
+                            border-image-source: linear-gradient(to left, #0000ff, transparent);
+                        }
+
+                        75% {
+                            border-image-source: linear-gradient(to top, #0000ff, transparent);
+                        }
+
+                        100% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+                    }
+
+                    h2,
+                    h3 {
+                        color: #0000ff;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        line-height: 1.6;
+                        text-align: left;
+                        margin: 10px 0;
+                    }
+
+                    ul {
+                        text-align: left;
+                        margin: 10px 0 10px 20px;
+                        padding: 0;
+                    }
+
+                    li {
+                        margin-bottom: 6px;
+                    }
+
+                    .extra {
+                        font-style: italic;
+                        color: #555;
+                    }
+
+                    @media (max-width: 768px) {
+                        .container {
+                            padding: 15px;
+                        }
+
+                        body {
+                            padding: 10px;
+                        }
                     }
                 </style>
             </head>
 
             <body>
+                <div class="container">
+                    <h2>Matches & Differs Strategies</h2>
 
-                <div class="iframe-container">
-                    <iframe src="https://www.dollarprinterfx.com/" frameborder="0" class="responsive-iframe"></iframe>
+                    <!-- Digit Differs Strategy Section -->
+                    <h3>Digit Differs Strategy</h3>
+                    <ul>
+                        <li><strong>Use 1 Tick.</strong></li>
+                        <li>Predict digit with less than 9%.</li>
+                        <li>Make sure the green bar is below 12%.</li>
+                    </ul>
+                    <p><strong>Entry Point:</strong> Make sure the number you predicted has been hit once before you
+                        enter the trade.</p>
+
+                    <!-- Digit Match Strategy Section -->
+                    <h3>Digit Match Strategy & Entry</h3>
+                    <ul>
+                        <li>Visit <em>Mr Together We Win</em> on YouTube and search for <strong>Digit Match
+                                Strategy</strong> while trading on Deriv Hub.</li>
+                    </ul>
+                    <p><strong>Additional Tips:</strong></p>
+                    <ul>
+                        <li>Always confirm the trend with additional market analysis before executing a trade.</li>
+                        <li>Utilize a demo account to practice these strategies until you feel comfortable with the
+                            timing and execution.</li>
+                        <li>Set clear stop-loss orders to manage risk and avoid unexpected losses.</li>
+                        <li>Keep a trading journal to document your decisions and refine your strategy over time.</li>
+                        <li>Ensure that you have a stable internet connection to avoid disruptions during critical
+                            trading moments.</li>
+                        <li>Remain patient and do not rush your trades—confirmation is key!</li>
+                    </ul>
+
+                    <p class="extra">Remember, consistent success in trading comes from combining technical strategies
+                        with sound risk management and continuous learning.</p>
                 </div>
-
             </body>
-
 
             </html>
 

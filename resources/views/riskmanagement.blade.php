@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="utf-8">
-    <title> - DERIV HUB</title>
+    <title> - DERIVHUB</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -42,14 +43,13 @@
 <body>
     <div class="container-fluid position-relative d-flex p-0">
         <!-- Spinner Start -->
-        {{-- <div id="spinner"
+        <div id="spinner"
             class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
             <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-        </div> --}}
+        </div>
         <!-- Spinner End -->
-
 
 
         <!-- Sidebar Start -->
@@ -103,52 +103,121 @@
             </nav>
             <!-- Navbar End -->
 
-
             <!DOCTYPE html>
             <html lang="en">
 
             <head>
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Embedded Site</title>
+                <title>Trading Strategies & Risk Management</title>
                 <style>
-                    /* Make sure the body takes the full height and has no margin */
-                    body,
-                    html {
+                    * {
                         margin: 0;
                         padding: 0;
-                        height: 100%;
+                        box-sizing: border-box;
+                        font-family: 'Arial', sans-serif;
                     }
 
-                    /* Container for the iframe to control the layout */
-                    .iframe-container {
+                    body {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        min-height: 100vh;
+                        background-color: #101128;
+                        color: #0bfb1b;
+                    }
+
+                    .container {
+                        max-width: 800px;
+                        margin: auto;
+                        background-color: #252d40;
+                        padding: 20px;
+                        border-radius: 20px;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
                         position: relative;
-                        width: 100%;
-                        height: 90vh;
-                        /* Full viewport height */
-                        overflow: hidden;
+                        border: 4px solid transparent;
+                        animation: glowing-border 3s linear infinite, border-move 5s linear infinite;
                     }
 
-                    /* The iframe itself, making it responsive */
-                    .responsive-iframe {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 90%;
-                        border: none;
+                    @keyframes glowing-border {
+                        0% {
+                            box-shadow: 0 0 15px #0000ff, 0 0 25px #0000ff, 0 0 35px #0000ff;
+                        }
+
+                        100% {
+                            box-shadow: 0 0 25px #0000ff, 0 0 35px #0000ff, 0 0 45px #0000ff;
+                        }
+                    }
+
+                    @keyframes border-move {
+                        0% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+
+                        25% {
+                            border-image-source: linear-gradient(to bottom, #0000ff, transparent);
+                        }
+
+                        50% {
+                            border-image-source: linear-gradient(to left, #0000ff, transparent);
+                        }
+
+                        75% {
+                            border-image-source: linear-gradient(to top, #0000ff, transparent);
+                        }
+
+                        100% {
+                            border-image-source: linear-gradient(to right, #0000ff, transparent);
+                        }
+                    }
+
+                    h2 {
+                        color: #0000ff;
+                    }
+
+                    p {
+                        line-height: 1.6;
+                    }
+
+                    @media (max-width: 768px) {
+                        .container {
+                            padding: 15px;
+                        }
+
+                        body {
+                            padding: 10px;
+                        }
                     }
                 </style>
             </head>
 
             <body>
+                <div class="container">
+                    <h2>Why is Risk Management Important?</h2>
+                    <p><strong>Prevents large losses:</strong> By setting limits on how much you can lose on a single
+                        trade, you can avoid catastrophic losses that could wipe out your trading capital.</p>
+                    <p><strong>Promotes disciplined trading:</strong> It helps you make rational decisions based on
+                        analysis rather than emotions.</p>
+                    <p><strong>Allows for consistent profitability:</strong> By managing risk effectively, you can
+                        maintain a stable trading account and potentially achieve long-term gains.</p>
 
-                <div class="iframe-container">
-                    <iframe src="https://www.dollarprinterfx.com/" frameborder="0" class="responsive-iframe"></iframe>
+                    <h2>Key Risk Management Strategies</h2>
+                    <p><strong>Position Sizing:</strong> Allocate only a small percentage of your total capital to each
+                        trade to minimize exposure.</p>
+                    <p><strong>Stop-Loss Orders:</strong> Set predefined exit points to limit potential losses.</p>
+                    <p><strong>Risk-Reward Ratio:</strong> Always ensure your potential reward outweighs the risk taken.
+                    </p>
+                    <p><strong>Diversification:</strong> Spread investments across different assets to reduce overall
+                        risk.</p>
+                    <p><strong>Emotional Control:</strong> Avoid impulsive trading and stick to a well-defined strategy.
+                    </p>
+
+                    <h2>Balancing Potential Gains & Losses</h2>
+                    <p>Make sure you balance potential gains with the possibility of losses by implementing strategies
+                        to minimize the potential for losses & protect your capital. Set your stop-loss orders and
+                        evaluate risk-reward ratios on each trade.</p>
                 </div>
-
             </body>
-
 
             </html>
 
